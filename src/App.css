@@ -4,10 +4,13 @@
   padding: 0;
   box-sizing: border-box;
 }
-.main{
-  background-image: url('http://www.w3.org/2000/svg');
+body{
+  background-color: #070724;
+  background-image: url("./src/assets/background-stars.svg");
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100vw;
+  height: 100vh;
 }
 svg{
   background-color: black;
@@ -19,4 +22,24 @@ svg{
   font-weight: 400;
   font-size: 28px;
   letter-spacing: -1.05px;
+  color: white;
+  margin-left: 24px;
+  margin-top: 16px;
+}
+.headerAndNavBar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+.burgerMenu{
+  margin-top: 26px;
+  margin-right: 24px;
+}
+
+.mainHr{
+  background-color: white;
+  margin-top: 16px;
+  opacity: 0.2;
+  mix-blend-mode: normal;
 }
