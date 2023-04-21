@@ -1,33 +1,33 @@
-.menuPlanets h3{
-    color: white;
-    font-family: 'League Spartan', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    }
-    .circle{
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      margin-bottom: 23px;
-      margin-left: 24px;
-    }
-    .hamburger-menu__links{
-        width: 100%;
-       
-        position: absolute;
-        left: 0;
-        top: 67px;
-        padding-top: 44px;
-        background-color: #070724;
-      }
-      .hamburger-menu__links hr{
-        margin-left: 24px;
-        margin-right: 24px;
-        background-color: white;
-        opacity: 0.2;
-      }
+.menuPlanets h3 {
+  color: white;
+  font-family: "League Spartan", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-bottom: 23px;
+  margin-left: 24px;
+}
+.hamburger-menu__links {
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 70px;
+  padding-top: 44px;
+  background-color: #070724;
+}
+.hamburger-menu__links hr {
+  margin-left: 24px;
+  margin-right: 24px;
+  background-color: white;
+  opacity: 0.2;
+}

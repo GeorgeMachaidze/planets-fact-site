@@ -7,7 +7,6 @@
 body{
   background-color: #070724;
   background-image: url("./src/assets/background-stars.svg");
-  background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
   height: 100vh;
@@ -17,7 +16,7 @@ svg{
 }
 .headerAndNavBar h1{
   margin: 0;
-  font-family: 'Antonio';
+  font-family: Antonio;
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
@@ -25,21 +24,108 @@ svg{
   color: white;
   margin-left: 24px;
   margin-top: 16px;
+  margin-bottom: 16px;
 }
 .headerAndNavBar{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
 }
 .burgerMenu{
-  margin-top: 26px;
+  margin-top: 15px;
   margin-right: 24px;
+  
 }
-
 .mainHr{
   background-color: white;
-  margin-top: 16px;
   opacity: 0.2;
   mix-blend-mode: normal;
+}
+.headInfo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 75px;
+  margin: 24px 20px;
+}
+.headInfo h1{
+  font-family: League Spartan;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  opacity: 0.5;
+}
+
+.middleDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.mainImg{
+  margin: 95px;
+  width: 111px;
+  height: 111px;
+}
+.planetName{
+  font-family: Antonio;
+  font-style: normal;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 40px;
+}
+.text{
+  margin: 16px 24px 32px 24px;
+  text-align: center;
+  font-family: League Spartan;
+  font-style: normal;
+  color: white;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+}
+.source{
+  color: white;
+  opacity: 0.5;
+  font-family: League Spartan;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  mix-blend-mode: normal;
+}
+.info{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 28px 24px 48px 24px;
+}
+.infoContainer{
+  height: 48px;
+  border: 1px solid #FFFFFF;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+}
+.infoText{
+  opacity: 0.5;
+  font-family: League Spartan;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  margin-left: 24px;
+  letter-spacing: 0.727273px;
+}
+.infoNumber{
+  font-family: Antonio;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: -0.75px;
+  margin-right: 24px;
 }
