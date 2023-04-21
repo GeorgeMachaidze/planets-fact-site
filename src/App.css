@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&family=League+Spartan:wght@400;700&display=swap');
+* {
+  margin: 0 ;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main{
+  background-image: url('http://www.w3.org/2000/svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+svg{
+  background-color: black;
+}
+.headerAndNavBar h1{
+  margin: 0;
+  font-family: 'Antonio';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  letter-spacing: -1.05px;
+}
