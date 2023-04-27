@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./HamburgerMenu.css"
 import data from './data.json';
-
+import { Link } from "react-router-dom";
 
 const HamburgerMenu = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -18,11 +18,12 @@ const HamburgerMenu = () => {
           <div className="hamburger-menu__links">
       {data.map((planet,index) => (
         <div className="menuPlanets" key={index}>
-          <div style={{display: "flex", justifyContent:"space-between"}}>
+           
+           <Link onClick={toggleMenu} to={`/planets/${planet.name}`} style={{ textDecoration:"none",display: "flex", justifyContent:"space-between"}}>
             <div className="circle"style={{backgroundColor:planet.color}}></div>
             <h3 style={{marginLeft:"24px",marginTop:"2px"}}>{planet.name}</h3>
-            <img style={{width:"4px", height:"8px", marginLeft:"auto", marginRight:"32px", marginTop:"5px"}} src="./src/assets/Arrow.png"/>
-          </div>
+            <img style={{width:"4px", height:"8px", marginLeft:"auto", marginRight:"32px", marginTop:"5px"}} src="/src/assets/Arrow.png"/>
+            </Link>
           {data.length -1  > index && <hr style={{marginBottom: "22px"}}/>}
           </div>
       ))}   
