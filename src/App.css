@@ -3,12 +3,13 @@
   margin: 0 ;
   padding: 0;
   box-sizing: border-box;
+  
 }
 body{
   background-color: #070724;
   background-image: url("/src/assets/background-stars.svg");
   background-size: cover;
-  width: 100vw;
+  max-width: 100vw;
   height: 100vh;
 }
 svg{
@@ -45,8 +46,6 @@ svg{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 75px;
-  margin: 24px 20px;
 }
 .headInfo h1{
   font-family: League Spartan;
@@ -57,17 +56,32 @@ svg{
   color: white;
   opacity: 0.5;
 }
-
 .middleDiv{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+.options{
+  margin: 24px 20px 0;
+  align-items: center;
+}
+.rectangel{
+  width: 80px;
+  height: 4px;
+  margin-top: 17px;
+
+}
 .mainImg{
   margin: 95px;
   width: 111px;
   height: 111px;
+  
+}
+.secondImage{
+ position: absolute;
+ left: 40%;
+ top: 41%;
 }
 .planetName{
   font-family: Antonio;

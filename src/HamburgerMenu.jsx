@@ -3,16 +3,11 @@ import "./HamburgerMenu.css"
 import data from './data.json';
 import { Link } from "react-router-dom";
 
-const HamburgerMenu = () => {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggleMenu = () => {
-      setIsOpen(!isOpen);
-    };
+const HamburgerMenu = ({ isOpen, toggleMenu}) => {
   
     return (
       <div className="hamburger-menu">
-        <svg xmlns="http://www.w3.org/2000/svg" onClick={toggleMenu} width="24" height="21"><g fill="#FFF" fillRule="evenodd"><path d="M0 0h24v3H0zM0 7h24v3H0zM0 14h24v3H0z"/></g></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" style={{opacity: isOpen ? "0.5" : "1"}} onClick={toggleMenu} width="24" height="21"><g fill="#FFF" fillRule="evenodd"><path d="M0 0h24v3H0zM0 7h24v3H0zM0 14h24v3H0z"/></g></svg>
 
         {isOpen && (
           <div className="hamburger-menu__links">
@@ -31,6 +26,7 @@ const HamburgerMenu = () => {
         )}
       </div>
     );
-  };
+      };
+  
   
   export default HamburgerMenu;
