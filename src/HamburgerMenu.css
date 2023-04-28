@@ -32,3 +32,8 @@
   background-color: white;
   opacity: 0.2;
 }
+@media screen and (min-width: 768px){
+  .burgerMenu{
+    display: none;
+  }
+}

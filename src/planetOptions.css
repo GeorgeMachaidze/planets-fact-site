@@ -1,0 +1,81 @@
+.headInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.headInfo h1{
+    font-family: League Spartan;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    opacity: 0.5;
+  }
+.option{
+    margin: 24px 20px 0;
+    align-items: center;
+  }
+.rectangle{
+    width: 80px;
+    height: 4px;
+    margin-top: 17px;
+  }
+  .options{
+    display: none;
+  }
+  .number{
+    display: none;
+  }
+  span{
+    display: none;
+  }
+
+
+  @media screen and (min-width: 768px){
+   .options{
+    display: flex;
+   }
+   .headOptions{
+    display: none;
+   }
+   
+   .option{
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 281px;
+    height: 40px;
+    display: flex;
+   }
+   .rectangle{
+    display: none;
+   }
+   .headInfo{
+    display: flex;
+    flex-direction: column;
+   }
+   .headInfo h1{
+    opacity: 1;
+    text-align: left;
+    font-size: 12px;
+   }
+   span{
+    display: contents;
+    text-transform: uppercase;
+   }
+   .number{
+    display: flex;
+    color: white;
+    opacity: 0.5;
+    font-family: League Spartan;
+    font-style: normal;
+    font-weight: 700;
+    margin-right: 17px;
+    margin-left: 20px;
+    letter-spacing: 1.92857px;
+    line-height: 25px;
+    font-size: 12px;
+   }
+   .optionActive{
+    background-color: var(--color)
+   }
+  }

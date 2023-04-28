@@ -42,41 +42,17 @@ svg{
   opacity: 0.2;
   mix-blend-mode: normal;
 }
-.headInfo{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.headInfo h1{
-  font-family: League Spartan;
-  font-weight: 700;
-  font-size: 12px;
-  text-transform: uppercase;
-  text-align: center;
-  color: white;
-  opacity: 0.5;
-}
+
 .middleDiv{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.options{
-  margin: 24px 20px 0;
-  align-items: center;
-}
-.rectangel{
-  width: 80px;
-  height: 4px;
-  margin-top: 17px;
-
-}
 .mainImg{
   margin: 95px;
   width: 111px;
   height: 111px;
-  
 }
 .secondImage{
  position: absolute;
@@ -91,7 +67,7 @@ svg{
   font-weight: 400;
   font-size: 40px;
 }
-.text{
+.textContent{
   margin: 16px 24px 32px 24px;
   text-align: center;
   font-family: League Spartan;
@@ -101,6 +77,12 @@ svg{
   font-size: 15px;
   line-height: 22px;
 }
+.textAndSource{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .source{
   color: white;
   opacity: 0.5;
@@ -109,6 +91,12 @@ svg{
   font-style: normal;
   font-weight: 400;
   mix-blend-mode: normal;
+}
+.textAndOptions{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .info{
   width: 100%;
@@ -142,4 +130,78 @@ svg{
   font-size: 20px;
   letter-spacing: -0.75px;
   margin-right: 24px;
+}
+@media screen and (min-width: 768px){
+
+  .headerAndNavBar{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .headerAndNavBar h1{
+    margin-bottom: 0;
+  }
+  .textAndOptions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .textAndSource{
+    align-items: normal;
+    margin-left: 39px;
+    
+  }
+  .textContent{
+    text-align: left;
+    margin-left: 0;
+  }
+  .mainImg{
+    margin: 95px;
+    width: 270px;
+    height: 270px;
+  }
+  .infoContainer{
+    width: 164px;
+    height: 88px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: normal;
+  }
+  .info{
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 22px; 
+  }
+  .infoText{
+    opacity: 0.5;
+    font-family: League Spartan;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.727273px;
+    margin-left: 15px;
+  }
+  .infoNumber{
+    font-family: Antonio;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    letter-spacing: -0.75px;
+    margin-left: 15px;
+    
+  }
+}
+@media screen and (min-width: 768px){
+  .headerAndNavBar{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    margin-right: 41px;
+    margin-left: 32px;
+  }
 }

@@ -1,19 +1,21 @@
 import './App.css'
 import HamburgerMenu from './HamburgerMenu';
+import PlanetOptions from './PlanetOptions';
+import HeadMenu from './HeadMenu';
 import data from "./data.JSON";
 import React, { useState } from 'react';
 import { useParams } from "react-router-dom";
 
 
+
 function Planets() {
     
+    const [isOpen, setIsOpen] = useState(false);
     
-        const [isOpen, setIsOpen] = useState(false);
-    
-        const toggleMenu = () => {
+    const toggleMenu = () => {
           setIsOpen(!isOpen);
         };
-    const [selectedOption, setSelectedOption] = useState('overview');
+    const [selectedOption, setSelectedOption] = useState('');
     const { name } = useParams();
     const planetData = data.find((data) => data.name === name);  
 
@@ -24,22 +26,11 @@ function Planets() {
       <div className='headerAndNavBar'>
         <h1>THE PLANETS</h1>
         <div className='burgerMenu' ><HamburgerMenu isOpen={isOpen} toggleMenu={toggleMenu}/></div>
+        <div className='headMenu'><HeadMenu/></div>
       </div>
+      
       <hr className='mainHr'/>
-      <div className='headInfo'>
-        <div className="options" onClick={() => setSelectedOption('overview')}>
-            <h1>Overwiev</h1>
-            <div className="rectangel" style={{backgroundColor:selectedOption === "overview" && planetData.color }}></div>
-        </div>
-        <div className="options"onClick={() => setSelectedOption('structure')}>
-            <h1>Structure</h1>
-            <div className="rectangel" style={{backgroundColor:selectedOption === "structure" && planetData.color }}></div>
-            </div>
-        <div className="options"onClick={() => setSelectedOption('surface')}>
-            <h1>Surface</h1>
-            <div className="rectangel" style={{backgroundColor:selectedOption === "surface" && planetData.color }}></div>
-            </div>
-      </div>
+      <div className="headOptions"><PlanetOptions planetData={planetData} setSelectedOption={setSelectedOption} selectedOption={selectedOption}/></div>
       <hr className='mainHr'/>
       {planetData && (
   <div className='middleDiv' style={{ display: isOpen ? "none" : "flex"}}>
@@ -62,8 +53,11 @@ function Planets() {
         {selectedOption !== "structure" && selectedOption !== "surface" && (
         <img className='mainImg' src={planetData.images.planet} alt="" />
         )}
+
+    <div className='textAndOptions'>
+        <div className="textAndSource">
     <h1 className='planetName'>{planetData.name}</h1>
-    <p className='text'>{ selectedOption === "structure" && planetData.structure.content ||
+    <p className='textContent'>{ selectedOption === "structure" && planetData.structure.content ||
                                 selectedOption === "surface" && planetData.geology.content ||
                                 planetData.overview.content}</p>
     <div style={{display:"flex"}}>
@@ -72,6 +66,11 @@ function Planets() {
                                 selectedOption === "surface" && planetData.geology.source ||
                                 planetData.overview.source}>Wikipedia</a>
     <img style={{marginLeft: "4px"}} src="/src/assets/icon-source.svg" alt="" />
+    </div>
+        </div>
+        <div className="options">
+        <PlanetOptions planetData={planetData} setSelectedOption={setSelectedOption} selectedOption={selectedOption}/>
+        </div>
     </div>
     <div className='info'>
       <div className='infoContainer'>
