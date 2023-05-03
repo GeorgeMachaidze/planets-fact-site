@@ -2,7 +2,7 @@ import "./App.css";
 import HamburgerMenu from "./HamburgerMenu";
 import PlanetOptions from "./PlanetOptions";
 import HeadMenu from "./HeadMenu";
-import data from "./data.JSON";
+import data from "./data.json";
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 
