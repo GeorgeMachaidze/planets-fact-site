@@ -1,7 +1,7 @@
 import './App.css'
 import React, { useState } from 'react';
 import {Routes, Route, Navigate} from 'react-router-dom';
-import Planets from './planets';
+import Planets from './Planets';
 
 function App() {
   
