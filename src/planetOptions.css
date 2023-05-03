@@ -1,59 +1,58 @@
-.headInfo{
+.headInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.headInfo h1 {
+  font-family: League Spartan;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  opacity: 0.5;
+}
+.option {
+  margin: 24px 20px 0;
+  align-items: center;
+}
+.rectangle {
+  width: 80px;
+  height: 4px;
+  margin-top: 17px;
+}
+.options {
+  display: none;
+}
+.number {
+  display: none;
+}
+span {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .options {
     display: flex;
-    justify-content: center;
-    align-items: center;
   }
-.headInfo h1{
-    font-family: League Spartan;
-    font-weight: 700;
-    font-size: 12px;
-    text-transform: uppercase;
-    text-align: center;
-    color: white;
-    opacity: 0.5;
-  }
-.option{
-    margin: 24px 20px 0;
-    align-items: center;
-  }
-.rectangle{
-    width: 80px;
-    height: 4px;
-    margin-top: 17px;
-  }
-  .options{
-    display: none;
-  }
-  .number{
-    display: none;
-  }
-  span{
+  .headOptions {
     display: none;
   }
 
-
-  @media screen and (min-width: 768px){
-   .options{
-    display: flex;
-   }
-   .headOptions{
-    display: none;
-   }
-   
-   .option{
+  .option {
     border: 1px solid rgba(255, 255, 255, 0.2);
     width: 281px;
     height: 40px;
     display: flex;
-   }
-   .rectangle{
+  }
+  .rectangle {
     display: none;
-   }
-   .headInfo{
+  }
+  .headInfo {
     display: flex;
     flex-direction: column;
-   }
-   .headInfo h1{
+  }
+  .headInfo h1 {
     opacity: 1;
     text-align: left;
     font-family: League Spartan;
@@ -61,12 +60,12 @@
     font-weight: 700;
     font-size: 12px;
     line-height: 25px;
-   }
-   span{
+  }
+  span {
     display: contents;
     text-transform: uppercase;
-   }
-   .number{
+  }
+  .number {
     display: flex;
     color: white;
     opacity: 0.5;
@@ -78,23 +77,23 @@
     letter-spacing: 1.92857px;
     line-height: 25px;
     font-size: 12px;
-   }
-   .optionActive{
+  }
+  .optionActive {
     background-color: var(--color);
-   }
   }
-  @media screen and (min-width: 1440px){
-    .option{
-     width: 350px;
-      margin-left: 0;
-      margin-right: 0;
-      cursor: pointer;
-    }
-    .option:hover{
-      background-color: rgba(216, 216, 216, 0.5)
-    }
-    .number{
-      margin-right: 28px;
-      margin-left: 28px;
-     }
+}
+@media screen and (min-width: 1440px) {
+  .option {
+    width: 350px;
+    margin-left: 0;
+    margin-right: 0;
+    cursor: pointer;
   }
+  .option:hover {
+    background-color: rgba(216, 216, 216, 0.5);
+  }
+  .number {
+    margin-right: 28px;
+    margin-left: 28px;
+  }
+}
