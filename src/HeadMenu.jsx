@@ -3,16 +3,26 @@ import "./HeadMenu.css"
 import data from './data.json';
 import { Link } from "react-router-dom";
 
-const HeadMenu = () => {
+const HeadMenu = (props) => {
   
+  const { selectedPlanet, setSelectedPlanet, planetData } = props;
+
     return (
         
-          <div className="menu__links">
+      <div className="menu__links">  
+          
       {data.map((planet,index) => (
-        <div className="menuPlanets" key={index}>
-           <Link  to={`/planets/${planet.name}`} style={{ textDecoration:"none",display: "flex", justifyContent:"space-between"}}>
-            <h3 style={{marginLeft:"24px",marginTop:"2px"}}>{planet.name}</h3>
+        <div className="menuPlanets"  key={index} >
+          <div  className="rectangleForPC"
+            style={{
+              backgroundColor:
+                selectedPlanet === planet.name ? planet.color : "transparent"
+            }}
+             ></div>  
+           <Link onClick={() => setSelectedPlanet(planet.name)} to={`/planets/${planet.name}`} style={{ textDecoration:"none",display: "flex", justifyContent:"space-between"}}>
+            <h3>{planet.name}</h3>
             </Link>
+            
           </div>
       ))}   
           </div>
@@ -23,3 +33,4 @@ const HeadMenu = () => {
   
   
   export default HeadMenu;
+  

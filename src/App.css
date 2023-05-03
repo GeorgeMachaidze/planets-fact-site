@@ -1,21 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&family=League+Spartan:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&family=League+Spartan:wght@400;700&display=swap");
 * {
-  margin: 0 ;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
-body{
+body {
   background-color: #070724;
   background-image: url("/src/assets/background-stars.svg");
   background-size: cover;
   max-width: 100vw;
   height: 100vh;
 }
-svg{
+svg {
   background-color: black;
 }
-.headerAndNavBar h1{
+.headerAndNavBar h1 {
   margin: 0;
   font-family: Antonio;
   font-style: normal;
@@ -27,39 +26,40 @@ svg{
   margin-top: 16px;
   margin-bottom: 16px;
 }
-.headerAndNavBar{
+.headerAndNavBar {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.burgerMenu{
+.burgerMenu {
   margin-top: 15px;
   margin-right: 24px;
-  
 }
-.mainHr{
+.mainHr {
   background-color: white;
   opacity: 0.2;
   mix-blend-mode: normal;
 }
 
-.middleDiv{
+.middleDiv {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.mainImg{
+.mainImg {
   margin: 95px;
   width: 111px;
   height: 111px;
 }
-.secondImage{
- position: absolute;
- left: 40%;
- top: 41%;
+.secondImage {
+  position: absolute;
+  left: 145px;
+  width: 80px;
+  height: 90px;
+  top: 280px;
 }
-.planetName{
+.planetName {
   font-family: Antonio;
   font-style: normal;
   color: white;
@@ -67,7 +67,7 @@ svg{
   font-weight: 400;
   font-size: 40px;
 }
-.textContent{
+.textContent {
   margin: 16px 24px 32px 24px;
   text-align: center;
   font-family: League Spartan;
@@ -77,13 +77,13 @@ svg{
   font-size: 15px;
   line-height: 22px;
 }
-.textAndSource{
+.textAndSource {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.source{
+.source {
   color: white;
   opacity: 0.5;
   font-family: League Spartan;
@@ -92,28 +92,28 @@ svg{
   font-weight: 400;
   mix-blend-mode: normal;
 }
-.textAndOptions{
+.textAndOptions {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.info{
+.info {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 8px;
   padding: 28px 24px 48px 24px;
 }
-.infoContainer{
+.infoContainer {
   height: 48px;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   display: flex;
   color: white;
   justify-content: space-between;
   align-items: center;
 }
-.infoText{
+.infoText {
   opacity: 0.5;
   font-family: League Spartan;
   font-style: normal;
@@ -123,7 +123,7 @@ svg{
   margin-left: 24px;
   letter-spacing: 0.727273px;
 }
-.infoNumber{
+.infoNumber {
   font-family: Antonio;
   font-style: normal;
   font-weight: 400;
@@ -131,52 +131,56 @@ svg{
   letter-spacing: -0.75px;
   margin-right: 24px;
 }
-@media screen and (min-width: 768px){
-
-  .headerAndNavBar{
+@media screen and (min-width: 768px) {
+  .headerAndNavBar {
     justify-content: center;
     display: flex;
     flex-direction: column;
   }
-  .headerAndNavBar h1{
+  .headerAndNavBar h1 {
     margin-bottom: 0;
   }
-  .textAndOptions{
+  .textAndOptions {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
   }
-  .textAndSource{
+  .textAndSource {
     align-items: normal;
     margin-left: 39px;
-    
   }
-  .textContent{
+  .textContent {
     text-align: left;
     margin-left: 0;
   }
-  .mainImg{
+  .mainImg {
     margin: 95px;
     width: 270px;
     height: 270px;
   }
-  .infoContainer{
+  .secondImage{
+    left: 320px;
+    top: 370px;
+    width: 135px;
+    height: 200px;
+  }
+  .infoContainer {
     width: 164px;
     height: 88px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
     align-items: normal;
   }
-  .info{
+  .info {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 22px; 
+    gap: 22px;
   }
-  .infoText{
+  .infoText {
     opacity: 0.5;
     font-family: League Spartan;
     font-style: normal;
@@ -186,22 +190,69 @@ svg{
     letter-spacing: 0.727273px;
     margin-left: 15px;
   }
-  .infoNumber{
+  .infoNumber {
     font-family: Antonio;
     font-style: normal;
     font-weight: 400;
     font-size: 25px;
     letter-spacing: -0.75px;
     margin-left: 15px;
-    
   }
 }
-@media screen and (min-width: 768px){
-  .headerAndNavBar{
+@media screen and (min-width: 1440px) {
+  .headerAndNavBar {
     justify-content: space-between;
     display: flex;
     flex-direction: row;
     margin-right: 41px;
     margin-left: 32px;
+  }
+  .middleDiv {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 126px;
+    margin-left: 165px;
+    margin-right: 165px;
+  }
+  .mainImg {
+    margin-left: 150px;
+    width: 290px;
+    height: 290px;
+  }
+  .textAndOptions {
+    flex-direction: column;
+  
+    margin: 0;
+  }
+  .planetName {
+    font-size: 80px;
+  }
+  .textContent {
+    text-align: left;
+    width: 350px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .info {
+    margin-top: 55px;
+  }
+  .infoContainer {
+    width: 255px;
+    height: 128px;
+  }
+  .infoText {
+    font-size: 11px;
+  }
+  .infoNumber {
+    font-size: 40px;
+  }
+  .secondImage{
+    left: 380px;
+    top: 480px;
+    width: 165px;
+    height: 200px;
   }
 }

@@ -56,7 +56,11 @@
    .headInfo h1{
     opacity: 1;
     text-align: left;
+    font-family: League Spartan;
+    font-style: normal;
+    font-weight: 700;
     font-size: 12px;
+    line-height: 25px;
    }
    span{
     display: contents;
@@ -76,6 +80,21 @@
     font-size: 12px;
    }
    .optionActive{
-    background-color: var(--color)
+    background-color: var(--color);
    }
+  }
+  @media screen and (min-width: 1440px){
+    .option{
+     width: 350px;
+      margin-left: 0;
+      margin-right: 0;
+      cursor: pointer;
+    }
+    .option:hover{
+      background-color: rgba(216, 216, 216, 0.5)
+    }
+    .number{
+      margin-right: 28px;
+      margin-left: 28px;
+     }
   }
