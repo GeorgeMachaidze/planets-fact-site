@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const HeadMenu = (props) => {
   
-  const { selectedPlanet, setSelectedPlanet, planetData } = props;
+  const { name } = props;
 
     return (
         
@@ -16,7 +16,7 @@ const HeadMenu = (props) => {
           <div  className="rectangleForPC"
             style={{
               backgroundColor:
-                selectedPlanet === planet.name ? planet.color : "transparent"
+                name === planet.name ? planet.color : "transparent"
             }}
              ></div>  
            <Link onClick={() => setSelectedPlanet(planet.name)} to={`/planets/${planet.name}`} style={{ textDecoration:"none",display: "flex", justifyContent:"space-between"}}>

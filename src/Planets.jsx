@@ -13,7 +13,6 @@ function Planets() {
     setIsOpen(!isOpen);
   };
   const [selectedOption, setSelectedOption] = useState("");
-  const [selectedPlanet, setSelectedPlanet] = useState("Mercury");
   const { name } = useParams();
   const planetData = data.find(
     (data) => data.name.toLowerCase() === name.toLowerCase()
@@ -29,9 +28,7 @@ function Planets() {
           </div>
           <div className="headMenu">
             <HeadMenu
-              planetData={planetData}
-              selectedPlanet={selectedPlanet}
-              setSelectedPlanet={setSelectedPlanet}
+              name={name}
             />
           </div>
         </div>
